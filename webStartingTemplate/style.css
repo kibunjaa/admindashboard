@@ -79,9 +79,6 @@ body{
     .main-content{
         margin-left: 50px;
     }
-    .container-fluid{
-        padding-top: 10px;
-    }
 }
 /*Medium devices( tablets, 768px and up)*/
 @media (min-width: 768px){
@@ -91,7 +88,7 @@ body{
     .sidebar{
         text-align: center;
     }
-    .sidebar ul li span:nth-child(2){
+    .sidebar ul li span:nth-child{
         display: none;
     }
     .sidebar ul li span:nt{
