@@ -26,28 +26,28 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <label for="exampleFormControlInput1" class="form-label">Username:</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="username">
                     </div>
                     <div class="col-lg-12">
                         <label for="exampleFormControlInput1" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="inputEmail">
+                        <input type="email" class="form-control" id="inputEmail" name="email">
                     </div>
                     <div class="col-lg-12">
                         <label for="inputpassword" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="inputpassword">
+                        <input type="password" class="form-control" id="inputpassword" name="password">
                     </div>
                     <div class="col-lg-12">
                         <label for="inputpassword" class="form-label">Confirm Password:</label>
-                        <input type="password" class="form-control" id="inputpassword">
+                        <input type="password" class="form-control" id="inputpassword" name="cpassword">
                     </div>
                     <br>
-                    <div class="col-lg-12">
-                        <button type="submit" class="btn btn-primary">submit</button>
+                </div>
+                <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-sm" name="signup">submit</button>
                     </div> 
                     <div class="col-lg-12">
                         <span>Have account? in</span> <a href="#"> Here</a>
-                    </div>                                                   
-                </div>
+                    </div>
             </form>                                           
         </div>
     </div>

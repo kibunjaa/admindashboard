@@ -13,30 +13,30 @@
 </head>
 <body>
 	<!-- All our code. write here   -->
-	<div class="header">
-		<img src="images/zalegologo.jpg" alt="Zalego" height="50" width="50" class="rounded-circle">
+	 <div class="header">
+		<img src="images/zalegologo.jpg" alt="Zalego" height="50" width="50" class="rounded-circle"> 
 		<a href="#" class="navbar-trigger"><span></span></a>
-	</div>
+	</div> 
 
 	<div class="sidebar">
 		<nav>
 			<ul>
 				<li>
-					<a href="">    
+					<a href="student.php">    
 						<span><i class="fa fa-group"></i> </span>                  
-						<span>Students</span>
+						<a href="student.php">student</a>	
 					</a>
 				</li>
 				<li>
-					<a href="">   
+					<a href="courses.php">   
 						<span><i class="fa fa-folder-open"></i> </span>             
-						<span>Courses</span>
+						<a href="courses.php">Courses</a>
 					</a>
 				</li>
 				<li>
-					<a href="">     
-						<span><i class="fa fa-graduation-cap"></i> </span>        
-						<span>Campus</span>
+					<a href="campus.php">     
+						<span><i class="fa fa-graduation-cap"></i> </span> 
+						<a href="campus.php">campus</a>
 					</a>
 				</li>
 			</ul>
