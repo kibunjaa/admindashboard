@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,44 +9,23 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Creating admin dashboard">
 	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
-	<meta name="author" content="Your name">
+	<meta name="author" content="Kibunja Franziska">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
+	<?php require_once('includes/links.php')?>
 </head>
 <body>
 	<!-- All our code. write here   -->
-	 <div class="header">
-		<img src="images/zalegologo.jpg" alt="Zalego" height="50" width="50" class="rounded-circle"> 
-		<a href="#" class="navbar-trigger"><span></span></a>
-	</div> 
+	<!-- beginning of header-->
+	<?php require_once('includes/header.php') ?>
+	<!-- end of header -->
 
-	<div class="sidebar">
-		<nav>
-			<ul>
-				<li>
-					<a href="student.php">    
-						<span><i class="fa fa-group"></i> </span>                  
-						<a href="student.php">student</a>	
-					</a>
-				</li>
-				<li>
-					<a href="courses.php">   
-						<span><i class="fa fa-folder-open"></i> </span>             
-						<a href="courses.php">Courses</a>
-					</a>
-				</li>
-				<li>
-					<a href="campus.php">     
-						<span><i class="fa fa-graduation-cap"></i> </span> 
-						<a href="campus.php">campus</a>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-
+	<!-- sidebar starts -->
+	<?php require_once('includes/sidebar.php') ?>
+	<!-- sidebar ends -->
+	
 	<div class="main-content">
 		<div class="container-fluid">
 			<div class="row">

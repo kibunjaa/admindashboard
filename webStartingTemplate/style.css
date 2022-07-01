@@ -9,15 +9,15 @@ body{
     position: absolute;
     height: 50px;
     width: 100%;
-    background-color: #ff4500;
-    z-index: 5;
-    padding-bottom: 50px;
+    background-color: #f57e20;
+    z-index: 6;
+    padding: 10px;
 }
 .sidebar{
     position: absolute;
     width: 50%;
-    background-color:#ff0000;
-    height: 100vh;
+    background-color:#7fc242;
+    height: 100%;
     z-index: 4;
     padding-top: 10px;
 }
@@ -88,7 +88,7 @@ body{
     .sidebar{
         text-align: center;
     }
-    .sidebar ul li span:nth-child{
+    .sidebar ul li span:nth-child(2){
         display: none;
     }
     .sidebar ul li span:nt{

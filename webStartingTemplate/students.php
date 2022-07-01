@@ -16,13 +16,19 @@
 	<!-- All our code. write here   -->
 	 <div class="header">
         <a href="index.php">
-		<img src="images/zalegologo.jpg" alt="Zalego" height="50" width="50" class="rounded-circle"> 
+		<img src="images/zalegologo.jpg" alt="Zalego" height="50" width="50" class=" mx-auto rounded-circle"> 
 		</a>
 	</div> 
-
+    <br>
 	<div class="sidebar">
 		<nav>
 			<ul>
+               <li>
+					<a href="index.php">    
+						<span><i class="fa fa-group"></i> </span>                  
+						<span>Home</span>
+					</a>
+				</li>
 				<li>
 					<a href="">    
 						<span><i class="fa fa-group"></i> </span>                  
@@ -50,21 +56,23 @@
 			<div class="row">				
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span>Student</span>
+						<span>Students</span>
 					</div>										
 				</div>                 
 			</div>  
             <div class="card">
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover table-responsive{-sm|-md|-lg|-xl">
                         <thead>
                             <tr>
-                                <th scope="col">id</th>
-                                <th scope="col">Fullname</th>
-                                <th scope="col">phone</th>
-                                <th scope="col">email</th>
-                                <th scope="col">gender</th>
-                                <th scope="col">course</th>
+                                <th>id</th>
+                                <th >Fullname</th>
+                                <th >phone</th>
+                                <th >email</th>
+                                <th >gender</th>
+                                <th >course</th>
+                                <th>Enrolled on</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,6 +83,13 @@
                                 <td>zigy@gmail.com</td>
                                 <td>Female</td>
                                 <td>Web Design and Development</td>
+                                <td>11th May 2021</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> </a>                                     
+                                    <a href="#" class="btn btn-info btn-sm">  <i class="fa fa-eye"></i> </a>                                                                    
+                                    <a href="#" class="btn btn-danger btn-sm">   <i class="fa fa-trash"></i></a>
+                                                                     
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
@@ -83,6 +98,13 @@
                                 <td>celline@gmail.com</td>
                                 <td>Female</td>
                                 <td>Cyber Security</td>
+                                <td>11th May 2021</td>
+                                <td>
+                                 <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                 <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-eye"></i></a>
+                                 <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                </td>
+
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
@@ -91,17 +113,14 @@
                                 <td>Naren@gmail.com</td>
                                 <td>Male</td>
                                 <td>Data Analysis</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Siddhart Nigam</td>
-                                <td>072328562</td>
-                                <td>Nigam@gmail.com</td>
-                                <td>Male</td>
-                                <td>Cyber Security</td>
-                            </tr>
+                                <td>1oth May 2021</td>
+                                <td>
+                                 <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                 <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                 <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>                           
                         </tbody>
-
                     </table>
                 </div>
             </div>

@@ -1,3 +1,8 @@
+<?php
+$msg='';
+require_once('processRegister.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +22,12 @@
     <br>
     <br>
     <div class="sub-header"style="text-align:center">
-        <img src="images/zalegologo.jpg" alt="Zalego" height="100" width="100" class="rounded-circle">
+        <img src="images/zalegologo.jpg" alt="zalego" height="100" width="100" class="mx-auto d-block rounded-circle">
+        <span><?php  echo $msg ?></span>
     </div>
-      
     <div class="container">          
         <div class="shadow-lg p-3 mb-5 bg-body rounded">
-            <form>
+            <form action="register.php" method="POST" autocomplete="off">
                 <div class="row">
                     <div class="col-lg-12">
                         <label for="exampleFormControlInput1" class="form-label">Username:</label>
