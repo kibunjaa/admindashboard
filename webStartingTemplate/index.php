@@ -21,7 +21,7 @@ session_start();
 	<!-- beginning of header-->
 	<?php require_once('includes/header.php') ?>
 	<!-- end of header -->
-
+<br>
 	<!-- sidebar starts -->
 	<?php require_once('includes/sidebar.php') ?>
 	<!-- sidebar ends -->

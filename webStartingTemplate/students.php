@@ -1,3 +1,14 @@
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$database="zalego";
+
+$conn=mysqli_connect($server,$username,$password,$database);
+$sql= mysqli_query($conn, "SELECT *FROM enrollment");
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,36 +31,9 @@
 		</a>
 	</div> 
     <br>
-	<div class="sidebar">
-		<nav>
-			<ul>
-               <li>
-					<a href="index.php">    
-						<span><i class="fa fa-group"></i> </span>                  
-						<span>Home</span>
-					</a>
-				</li>
-				<li>
-					<a href="">    
-						<span><i class="fa fa-group"></i> </span>                  
-						<span>Students</span>
-					</a>
-				</li>
-				<li>
-					<a href="">   
-						<span><i class="fa fa-folder-open"></i> </span>             
-						<span>Courses</span>
-					</a>
-				</li>
-				<li>
-					<a href="">     
-						<span><i class="fa fa-graduation-cap"></i> </span>        
-						<span>Campus</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
+	<!-- sidebar starts -->
+	<?php require_once('includes/sidebar.php') ?>
+	<!-- sidebar ends -->
 
 	<div class="main-content">
 		<div class="container-fluid">
@@ -66,60 +50,32 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th >Fullname</th>
-                                <th >phone</th>
-                                <th >email</th>
-                                <th >gender</th>
-                                <th >course</th>
-                                <th>Enrolled on</th>
+                                <th >FullName</th>
+                                <th >Phone</th>
+                                <th >Email</th>
+                                <th >Gender</th>
+                                <th >Course</th>                
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Zigrid Wanjiru</td>
-                                <td>0724602129</td>
-                                <td>zigy@gmail.com</td>
-                                <td>Female</td>
-                                <td>Web Design and Development</td>
-                                <td>11th May 2021</td>
-                                <td>
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> </a>                                     
-                                    <a href="#" class="btn btn-info btn-sm">  <i class="fa fa-eye"></i> </a>                                                                    
-                                    <a href="#" class="btn btn-danger btn-sm">   <i class="fa fa-trash"></i></a>
-                                                                     
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Celline Wanjiku</td>
-                                <td>0723619228</td>
-                                <td>celline@gmail.com</td>
-                                <td>Female</td>
-                                <td>Cyber Security</td>
-                                <td>11th May 2021</td>
-                                <td>
-                                 <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                                 <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-eye"></i></a>
-                                 <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Naren Vyas</td>
-                                <td>918524369</td>
-                                <td>Naren@gmail.com</td>
-                                <td>Male</td>
-                                <td>Data Analysis</td>
-                                <td>1oth May 2021</td>
-                                <td>
-                                 <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                                 <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-                                 <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                </td>
+                            <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) { ?>
+                                <tr>
+                                    <td> <?php echo $fetchEnrollmentRecord['no']  ?></td>
+                                    <td> <?php echo $fetchEnrollmentRecord['fullname']  ?></td>
+                                    <td> <?php echo $fetchEnrollmentRecord['phonenumber']  ?></td>
+                                    <td> <?php echo $fetchEnrollmentRecord['email']  ?></td>
+                                    <td> <?php echo $fetchEnrollmentRecord['gender']  ?></td>
+                                    <td> <?php echo $fetchEnrollmentRecord['course']  ?></td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                        <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>                            
                             </tr>                           
+                                </tr>                            
+                           <?php }?>                         
                         </tbody>
                     </table>
                 </div>
