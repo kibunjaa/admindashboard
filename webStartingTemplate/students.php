@@ -1,35 +1,19 @@
 <?php
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
-
-$conn=mysqli_connect($server,$username,$password,$database);
+require_once ('logics/dpconnection.php');
 $sql= mysqli_query($conn, "SELECT *FROM enrollment");
 ?>
 
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Bootstrap Admin Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Creating admin dashboard">
-	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
-	<meta name="author" content="Franziska Kibunja">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css">
-    
-</head>
+    <!-- beginning of link -->
+      <?php require_once('includes/links.php')?>
+    <!-- end of link -->
 <body>
 	<!-- All our code. write here   -->
-	 <div class="header">
-        <a href="index.php">
-		<img src="images/zalegologo.jpg" alt="Zalego" height="50" width="50" class=" mx-auto rounded-circle"> 
-		</a>
-	</div> 
+    <!-- beginning of header-->
+      <?php require_once('includes/navbar.php') ?>
+	<!-- end of header -->
     <br>
 	<!-- sidebar starts -->
 	<?php require_once('includes/sidebar.php') ?>
