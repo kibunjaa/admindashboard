@@ -10,12 +10,12 @@ session_start();
 	<!-- beginning of header-->
 	<?php require_once('includes/navbar.php') ?>
 	<!-- end of header -->
-  <br>
+	<br>
 	<!-- sidebar starts -->
 	<?php require_once('includes/sidebar.php') ?>
 	<!-- sidebar ends -->
 	
-	<div class="main-content">
+	<div class="main-content pt-5">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12">
@@ -77,9 +77,6 @@ session_start();
 		</div>         
 	</div>
 
-    <script src="webStartingTemplate/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/webStartingTemplate/bootstrap/js/bootstrap.min.js"></script>
-    <script src="jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <?php require_once('includes/scripts.php') ?>
 </body>
 </html>

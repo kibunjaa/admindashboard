@@ -41,10 +41,6 @@ if(isset($_POST['signup']))
             $msg= "error occured";
         }
     }
-    
-
-
-
 }
     
 ?>
