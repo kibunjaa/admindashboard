@@ -10,6 +10,28 @@ while($fetchstudent =mysqli_fetch_array($querystudent))
 	$gender=$fetchstudent['gender'];
 	$course=$fetchstudent['course'];
 }
+//updating user records
+if(isset($_POST{'updateenrollment'}))
+{
+	//fetch form data
+	$fullname= $_POST['fullname'];
+	$phonenumber= $_POST['phonenumber'];
+	$email= $_POST['email'];
+	$gender= $_POST['gender'];
+	$course= $_POST['course'];
+
+	//perfom the sql query
+	$updaterecords= mysqli_query($conn, "UPDATE enrollment set fullname= '$fullname', phonenumber ='$phonenumber', email='$email', gender= '$gender', course='$course' WHERE no='".$_GET['id']."' ");
+	if($updaterecords)
+	{
+		$msg= "Record updated successfully";
+	}
+	else
+	{
+		$msg= "error occured";
+	}
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,10 +52,10 @@ while($fetchstudent =mysqli_fetch_array($querystudent))
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header bg-dark text-white text-center">
-							<h4>Edit Student </h4>
+							<h4>Edit Student <?php echo $fullname  ?></h4>
                         </div>
 						<div class="card-body">
-						    <form action="students.php" method="POST">
+						    <form action="edit-enrollment.php" method="POST">
 							    <div class="row">								
 									<div class="mb-3 col-lg-6">
 										<label for="fullname" class="form-label">Full name</label>
@@ -45,8 +67,6 @@ while($fetchstudent =mysqli_fetch_array($querystudent))
 									</div>
                                 </div>
 								<div class="row">
-
-								
 									<div class="mb-3 col-lg-6">
 										<label for="Emailaddress" class="form-label">Email Address</label>
 										<input type="email" name="email"  value="<?php echo $email ?>" class="form-control " placeholder=" please enter Your Email">
@@ -57,32 +77,26 @@ while($fetchstudent =mysqli_fetch_array($querystudent))
 											<option ><?php echo $gender ?></option>
 											<option value="Male">Male</option>
 											<option value="Female">Female</option>
-										</select>
-										        
+										</select>   
 									</div> 
-							    </div>      
-								                                   
+							    </div>  
+								<div class="row">
+									<div class="mb-3 col-lg-6">
+											<label for="message" class="form-label" >  What's your preferred course?</label>
+											<select class="form-select form-control " name="course" aria-label="Disabled select example">
+												<option><b><?php echo $course ?></b></option>
+												<option value="Web Development and Design">Web Development and Design</option>
+												<option value="Data Analysis">Data Analysis</option>
+												<option value="Cyber Security">Cyber Security</option>
+												<option value="Android App Development">Android App Development</option>
+											</select>	
+										</div> 
+								</div>    								                                   								
+								<div class="row pt-1">
 									<div class="col-lg-6">
-										<label for="message" class="form-label" > <b> What's your preferred course?</b></label>
-										<select class="form-select form-control " name="course" aria-label="Disabled select example">
-											<option><b><?php echo $course ?></b></option>
-											<option value="Web Development and Design">Web Development and Design</option>
-											<option value="Data Analysis">Data Analysis</option>
-											<option value="Cyber Security">Cyber Security</option>
-											<option value="Android App Development">Android App Development</option>
-										</select>	
-									</div> 
-									<div class="row">
-										<div class="mb-3 col-lg-12">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
-												<label class="form-check-label"><b> Agree terms and condition</b></label> 
-											</div>
-										</div>										
-									</div>									 
-									<div class="col-lg-6">
-										<button type="submit" name="submitapplication" class="btn btn-primary">Submit application</button>
-									</div>   
+										<button type="submit" name="updateenrollment" class="btn btn-primary">Update records</button>
+									</div>
+								</div>							
 							   </div>
 							</form>
 						</div>

@@ -51,7 +51,7 @@ if(isset($_POST['login']))
     <br>
     <br>
     <div class="sub-header" style="text-align:center">
-        <img src="images/zalegologo.jpg" alt="Zalego" height="100" width="100" class="rounded-circle">
+        <img src="images/ZALEGO.png" alt="Zalego" height="100" width="100" class="rounded-circle">
     </div>
     <div class="container">
         <div class="shadow-lg p-3 mb-5 bg-body rounded">
