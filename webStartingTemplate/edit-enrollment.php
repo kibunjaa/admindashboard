@@ -1,4 +1,5 @@
 <?php
+$message="";
 // database conn
 require_once('logics/dpconnection.php');
 $querystudent=mysqli_query($conn, "SELECT * FROM enrollment WHERE no ='".$_GET['id']."' ");
@@ -9,28 +10,10 @@ while($fetchstudent =mysqli_fetch_array($querystudent))
 	$email=$fetchstudent['email'];
 	$gender=$fetchstudent['gender'];
 	$course=$fetchstudent['course'];
+	$id=$fetchstudent['no'];
 }
 //updating user records
-if(isset($_POST{'updateenrollment'}))
-{
-	//fetch form data
-	$fullname= $_POST['fullname'];
-	$phonenumber= $_POST['phonenumber'];
-	$email= $_POST['email'];
-	$gender= $_POST['gender'];
-	$course= $_POST['course'];
-
-	//perfom the sql query
-	$updaterecords= mysqli_query($conn, "UPDATE enrollment set fullname= '$fullname', phonenumber ='$phonenumber', email='$email', gender= '$gender', course='$course' WHERE no='".$_GET['id']."' ");
-	if($updaterecords)
-	{
-		$msg= "Record updated successfully";
-	}
-	else
-	{
-		$msg= "error occured";
-	}
-}
+require_once('logics/process-update.php');
 
 ?>
 <!DOCTYPE html>
@@ -52,10 +35,11 @@ if(isset($_POST{'updateenrollment'}))
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header bg-dark text-white text-center">
-							<h4>Edit Student <?php echo $fullname  ?></h4>
+							<h4>Edit Student </h4>
+							<span class="text-success"> <?php echo $message  ?></span>
                         </div>
 						<div class="card-body">
-						    <form action="edit-enrollment.php" method="POST">
+						    <form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">
 							    <div class="row">								
 									<div class="mb-3 col-lg-6">
 										<label for="fullname" class="form-label">Full name</label>
