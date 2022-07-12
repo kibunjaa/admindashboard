@@ -22,11 +22,11 @@ require_once('logics/process-update.php');
 <body>
 	<!-- All our code. write here   -->
 	<!-- beginning of header-->
-	<?php require_once('includes/navbar.php') ?>
+	  <?php require_once('includes/navbar.php') ?>
 	<!-- end of header -->
 	<br>
 	<!-- sidebar starts -->
-	<?php require_once('includes/sidebar.php') ?>
+	    <?php require_once('includes/sidebar.php') ?>
 	<!-- sidebar ends -->
 	
 	<div class="main-content pt-5">

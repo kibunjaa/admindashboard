@@ -1,5 +1,13 @@
 <?php
-session_start();
+require_once('logics/dpconnection.php');
+
+// counting total number of students
+$queryenrolledstudents= mysqli_query($conn, "SELECT *FROM enrollment");
+$countallstudents= mysqli_num_rows($queryenrolledstudents);
+
+//count by gender
+$queryenrolledfemale= mysqli_query($conn, " SELECT *FROM enrollment WHERE gender= 'female'");
+$countallfemale= mysqli_num_rows($queryenrolledfemale)
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +37,7 @@ session_start();
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-group fa-2x"></i></span>
-						<span class="float-right">00</span>
+						<span class="float-right"> <?php echo $countallstudents ?> </span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
@@ -39,7 +47,7 @@ session_start();
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-folder-open fa-2x"></i></span>
-						<span class="float-right">00</span>
+						<span class="float-right"><?php echo $countallfemale ?></span>
 					</div>
 					<div class="card-footer"></div>
 				</div>            

@@ -30,7 +30,7 @@ $sql= mysqli_query($conn, "SELECT *FROM enrollment");
 			</div>  
             <div class="card">
                 <div class="card-body">
-                    <table class="table table-striped table-hover table-responsive{-sm|-md|-lg|-xl">
+                    <table class="table table-striped table-hover table-responsive{-sm|-md|-lg|-xl" style="font-size:12px">
                         <thead>
                             <tr>
                                 <th>id</th>
