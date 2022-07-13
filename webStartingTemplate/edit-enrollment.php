@@ -2,7 +2,8 @@
 $message="";
 // database conn
 require_once('logics/dpconnection.php');
-$querystudent=mysqli_query($conn, "SELECT * FROM enrollment WHERE no ='".$_GET['id']."' ");
+$querystudent=mysqli_query($conn, 
+        "SELECT * FROM enrollment WHERE no ='".$_GET['id']."' ");
 while($fetchstudent =mysqli_fetch_array($querystudent))
 {
 	$fullname= $fetchstudent['fullname'];
@@ -37,6 +38,10 @@ require_once('logics/process-update.php');
                         <div class="card-header bg-dark text-white text-center">
 							<h4>Edit Student </h4>
 							<span class="text-success"> <?php echo $message  ?></span>
+					            <a class="float-left text-white " href="students.php">    
+						          <span ><i class="fa fa-arrow-circle-left"></i> </span>                  
+						          <span >Back</span>
+					          </a>
                         </div>
 						<div class="card-body">
 						    <form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">
@@ -81,7 +86,6 @@ require_once('logics/process-update.php');
 										<button type="submit" name="updateenrollment" class="btn btn-primary">Update records</button>
 									</div>
 								</div>							
-							   </div>
 							</form>
 						</div>
                     </div>

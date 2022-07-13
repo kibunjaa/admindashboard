@@ -10,7 +10,7 @@
 				</li>
 				<li>
 					<a href="students.php">    
-						<span><i class="fa fa-group"></i> </span>                  
+						<span><i class="fa fa-group"></i> </span>      
 						<span> Students</span>
 					</a>
 				</li>
