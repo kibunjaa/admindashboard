@@ -1,20 +1,20 @@
 <?php
-$message="";
-// database conn
-require_once('logics/dpconnection.php');
-$querystudent=mysqli_query($conn, 
-        "SELECT * FROM enrollment WHERE no ='".$_GET['id']."' ");
-while($fetchstudent =mysqli_fetch_array($querystudent))
-{
-	$fullname= $fetchstudent['fullname'];
-	$phonenumber=$fetchstudent['phonenumber'];
-	$email=$fetchstudent['email'];
-	$gender=$fetchstudent['gender'];
-	$course=$fetchstudent['course'];
-	$id=$fetchstudent['no'];
-}
-//updating user records
-require_once('logics/process-update.php');
+	$message="";
+	// database conn
+	require_once('logics\dpconnection.php');
+	$querystudent=mysqli_query($conn, 
+			"SELECT * FROM enrollment WHERE no ='".$_GET['id']."' ");
+	while($fetchstudent =mysqli_fetch_array($querystudent))
+	{
+		$fullname= $fetchstudent['fullname'];
+		$phonenumber=$fetchstudent['phonenumber'];
+		$email=$fetchstudent['email'];
+		$gender=$fetchstudent['gender'];
+		$course=$fetchstudent['course'];
+		$id=$fetchstudent['no'];
+	}
+	//updating user records
+	require_once('logics/process-update.php');
 
 ?>
 <!DOCTYPE html>
@@ -36,12 +36,12 @@ require_once('logics/process-update.php');
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header bg-dark text-white text-center">
-							<h4>Edit Student </h4>
-							<span class="text-success"> <?php echo $message  ?></span>
-					            <a class="float-left text-white " href="students.php">    
+							<a class="float-left text-white " href="students.php">    
 						          <span ><i class="fa fa-arrow-circle-left"></i> </span>                  
 						          <span >Back</span>
 					          </a>
+							<h4>Edit Student </h4>
+							<span class="text-success"> <?php echo $message  ?></span>      
                         </div>
 						<div class="card-body">
 						    <form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">

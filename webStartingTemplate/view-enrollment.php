@@ -30,12 +30,12 @@
                 <div class="row">    
                     <div class="col-lg-6">
                             <div class="card">
-                                <div class="card-header bg-dark text-white text-center">
-                                    <h4 class="card-title">personal information</h4>
-                                        <a class="float-left text-white pb-1" href="students.php">    
+                                <div class="card-header bg-dark text-white text-center"> 
+                                    <a class="float-left text-white pb-1" href="students.php">    
                                             <span ><i class="fa fa-arrow-circle-left"></i> </span>                  
                                             <span>Back</span>
                                     </a>
+                                    <h4 class="card-title">personal information</h4>    
                                 </div> 
                                 <div class="card-body"> 
                                     <ul class="list-group">

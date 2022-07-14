@@ -1,6 +1,6 @@
 <?php
-require_once ('logics/dpconnection.php');
-$sql= mysqli_query($conn, "SELECT *FROM enrollment");
+    require_once ('logics/dpconnection.php');
+    $sql= mysqli_query($conn, "SELECT *FROM enrollment");
 ?>
 
 

@@ -15,7 +15,7 @@ if(isset($_POST['signup']))
 
     $sqlEmail = mysqli_query($conn, "SELECT * FROM account WHERE email = '$email' ");
     $checkEmail = mysqli_num_rows($sqlEmail);
-    if($checkEmail !=0){
+    if($checkusername !=0){
         $msg = "username already exist";
     }
     elseif($checkEmail !=0){

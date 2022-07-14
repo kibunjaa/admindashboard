@@ -10,7 +10,7 @@ require_once('processRegister.php')
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="cssstyles/register.css">
     <title>Register</title>
 </head>
 <body>
@@ -20,9 +20,8 @@ require_once('processRegister.php')
     </div>
     <br>
     <br>
-    <br>
     <div class="sub-header"style="text-align:center">
-        <img src="images/zalegologo.jpg" alt="zalego" height="100" width="100" class="mx-auto d-block rounded-circle">
+        <img src="images/ZALEGO.png" alt="zalego" height="100" width="100" class="mx-auto d-block rounded-circle">
         <span><?php  echo $msg ?></span>
     </div>
     <div class="container">          
@@ -51,7 +50,7 @@ require_once('processRegister.php')
                         <button type="submit" class="btn btn-primary btn-sm" name="signup">submit</button>
                     </div> 
                     <div class="col-lg-12">
-                        <span>Have account? in</span> <a href="#"> Here</a>
+                        <span>Have account? in</span> <a href="login.php"> Here</a>
                     </div>
             </form>                                           
         </div>

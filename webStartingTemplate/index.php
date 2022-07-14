@@ -1,5 +1,6 @@
 <?php
-require_once('logics/dpconnection.php');
+
+require_once ('logics/dpconnection.php');
 
 // counting total number of students
 $queryenrolledstudents= mysqli_query($conn, "SELECT *FROM enrollment");

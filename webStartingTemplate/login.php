@@ -4,6 +4,7 @@ session_start();
 //database connection
 require_once('connection.php');
 
+//setting
 if(isset($_POST['login']))
 {
     //fetch form data
@@ -12,24 +13,18 @@ if(isset($_POST['login']))
     $newPass =md5($password);
 
     //perform the sql query
-    $sql = mysqli_query($conn, "SELECT *FROM account WHERE username= '$username' and password='$newPass'");
+    $sql = mysqli_query($conn, "SELECT * FROM account WHERE username='$username' and password='$newPass'");
     $fetch = mysqli_fetch_array($sql);
 
     if($fetch > 0)
     {
+        $_SESSION['login'] = $username;
         header('location: index.php');     
     }
     else{
         echo "error";
     }
-    if($fetch > 0)
-    {
-        $_SESSION['login'] = $username;
-        header('location: index.php');
-    }
-    else{
-
-    }
+   
 }
 ?>
 
@@ -40,7 +35,7 @@ if(isset($_POST['login']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cssstyles/login.css">
     <title>Login</title>
 </head>
 <body>
@@ -55,7 +50,7 @@ if(isset($_POST['login']))
     </div>
     <div class="container">
         <div class="shadow-lg p-3 mb-5 bg-body rounded">
-            <form>
+            <form action="login.php" method="POST">
                 <div class="row">
                     <div class="col-lg-12">
                         <label for="exampleFormControlInput1" class="form-label">Username:</label>
@@ -66,9 +61,9 @@ if(isset($_POST['login']))
                         <input type="password" class="form-control" id="inputpassword">
                     </div>                  
                 </div>
-                <button type="submit" class="btn btn-primary">submit</button>
+                <button type="submit" class="btn btn-primary" name="login" > login </button>
                 <div class="col-lg-12">
-                    <span>Have no account?Sign up </span> <a href="#"> Here</a>
+                    <span>Have no account?Sign up </span> <a href="register.php"> Here</a>
                 </div>   
             </form>
 
