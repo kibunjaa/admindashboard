@@ -46,7 +46,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) { ?>
+                            <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) { ?>
                                 <tr>
                                     <td> <?php echo $fetchEnrollmentRecord['no']  ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['firstname']  ?></td>
