@@ -35,7 +35,7 @@ if(isset($_POST['login']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="cssstyles/login.css">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
 <body>
@@ -61,6 +61,7 @@ if(isset($_POST['login']))
                         <input type="password" class="form-control" id="inputpassword">
                     </div>                  
                 </div>
+                <br>
                 <button type="submit" class="btn btn-primary" name="login" > login </button>
                 <div class="col-lg-12">
                     <span>Have no account?Sign up </span> <a href="register.php"> Here</a>
