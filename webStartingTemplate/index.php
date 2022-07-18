@@ -13,7 +13,8 @@ $countallfemale= mysqli_num_rows($queryenrolledfemale)
 
 <!DOCTYPE html>
 <html>
-<?php require_once('includes/links.php')?>
+    <?php require_once('includes/links.php')?>
+
 <body>
 	<!-- All our code. write here   -->
 	<!-- beginning of header-->
@@ -23,6 +24,9 @@ $countallfemale= mysqli_num_rows($queryenrolledfemale)
 	<!-- sidebar starts -->
 	<?php require_once('includes/sidebar.php') ?>
 	<!-- sidebar ends -->
+	
+
+	
 	
 	<div class="main-content pt-5">
 		<div class="container-fluid">
@@ -85,7 +89,6 @@ $countallfemale= mysqli_num_rows($queryenrolledfemale)
 			</div>            
 		</div>         
 	</div>
-
-    <?php require_once('includes/scripts.php') ?>
+	<?php require_once('includes/scripts.php') ?>
 </body>
 </html>
