@@ -25,7 +25,11 @@
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>Students</span>
-					</div>										
+                        <a href="adding-student.php">    
+                             <span><i class="fa fa-edit"></i> </span>      
+                             <span></span>
+					    </a>	
+					</div>								
 				</div>                 
 			</div>  
             <div class="card">
@@ -43,9 +47,13 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $count=1;
+                            while($row = mysqli_fetch_array($sql)) {?>
+
                             <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) { ?>
+                                <td> 
                                 <tr>
-                                    <td> <?php echo $fetchEnrollmentRecord['no']  ?></td>
+                                   <td> <?php echo $count ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['fullname']  ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['phonenumber']  ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['email']  ?></td>
@@ -56,7 +64,8 @@
                                         <a href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                                         <a href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>
-                                </tr>                                                                                                                 
+                                </tr> 
+                                <?php $count++; } ?>                                                                                                                
                            <?php }?>                         
                         </tbody>
                     </table>

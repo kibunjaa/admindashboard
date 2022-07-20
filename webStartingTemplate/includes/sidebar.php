@@ -32,6 +32,12 @@
 					<span> Messages</span>
 					</a>
 				</li>
+				<li>
+					<a href="subscribe.php">
+					<span> <i class= "fa fa-edit"></i></span>
+					<span> Subscribe</span>
+					</a>
+				</li>
 				
 		</ul>
 	</nav>

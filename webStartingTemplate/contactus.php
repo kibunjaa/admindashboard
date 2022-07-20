@@ -33,10 +33,11 @@
 						    <span ><i class="fa fa-arrow-circle-left"></i> </span>                  
 						        <span >Back</span>
 					    </a>
+                            <a href="add-student.php">    
+                                <span><i class="fa fa-edit"></i> </span>      
+                                <span></span>
+					         </a>
 						<span>Contact Us</span>
-                        <button type="submit" name="updatecontactus" class="btn btn-primary">
-                            <a href="add-student.php"><span>Add User</span></a>  
-                        </button>
 					</div>										
 				</div>                 
 			</div>  
@@ -54,10 +55,12 @@
                             </tr>
                             
                         </thead>
-                        <tbody>                           
+                        <tbody>   
+                            <?php $count=1;
+                                while($row = mysqli_fetch_array($sql)) {?>                  
                             <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) { ?>
                                 <tr>
-                                    <td> <?php echo $fetchEnrollmentRecord['no']  ?></td>
+                                    <td> <?php echo $count ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['firstname']  ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['lastname']  ?></td>
                                     <td> <?php echo $fetchEnrollmentRecord['phonenumber']  ?></td>
@@ -69,7 +72,7 @@
                                         <a href="delete-contactus.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>  
-                                                                                                                                          
+                                 <?php $count++; } ?>                                                                                                    
                            <?php }?>                           
                         </tbody>
                     </table>
