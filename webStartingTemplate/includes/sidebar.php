@@ -32,6 +32,7 @@
 					<span> Messages</span>
 					</a>
 				</li>
+				
 		</ul>
 	</nav>
 </div>

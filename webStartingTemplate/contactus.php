@@ -26,7 +26,7 @@
 
     <div class="main-content">
 		<div class="container-fluid">
-			<div class="row">				
+        <div class="row">				
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
                         <a class="float-left text-white " href="index.php">    
@@ -34,6 +34,9 @@
 						        <span >Back</span>
 					    </a>
 						<span>Contact Us</span>
+                        <button type="submit" name="updatecontactus" class="btn btn-primary">
+                            <a href="add-student.php"><span>Add User</span></a>  
+                        </button>
 					</div>										
 				</div>                 
 			</div>  
@@ -51,7 +54,7 @@
                             </tr>
                             
                         </thead>
-                        <tbody>
+                        <tbody>                           
                             <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) { ?>
                                 <tr>
                                     <td> <?php echo $fetchEnrollmentRecord['no']  ?></td>
@@ -71,7 +74,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div>			
 		</div>         
 	</div>
 </body>

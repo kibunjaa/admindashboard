@@ -10,7 +10,7 @@ if(isset($_POST{'updatecontactus'}))
 		$message=$_POST['message'];
 		
 	//perfom the sql query
-	$updaterecords= mysqli_query($conn, "UPDATE contactus SET firstname= '$firstname', lastname='$lastname', phonenumber ='$phonenumber', email='$email', message='$message' 
+	$updaterecords= mysqli_query($conn, "UPDATE contactus SET firstname= '$firstname', lastname='$lastname', phonenumber ='$phonenumber', email='$email', message='$message'
 	WHERE no='".$_GET['id']."' ");
 	if($updaterecords)
 	{

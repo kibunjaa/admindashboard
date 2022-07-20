@@ -29,9 +29,7 @@
 	<!-- sidebar starts -->
 	    <?php require_once('includes/sidebar.php') ?>
 	<!-- sidebar ends -->
-	
 
-	
 	<div class="main-content pt-5">
 		<div class="container-fluid">
             <div class="row">
@@ -70,7 +68,6 @@
 								<div class="row">
 									<div class="col-lg-12">
 										<label for="message" class="form-label">Your message</label>
-										
 										<input type="text" class="form-control" name="message"  value="<?php echo $message ?>" placeholder="Enter Your message">
 									</div>
 								</div>	
