@@ -36,7 +36,7 @@
 						          <span ><i class="fa fa-arrow-circle-left"></i> </span>                  
 						          <span >Back</span>
 					          </a>
-							<h4>Edit Student </h4>
+							<h4>Edit subscribers </h4>
 							<span class="text-success"> <?php echo $msg  ?></span>      
                         </div>
 						<div class="card-body">
